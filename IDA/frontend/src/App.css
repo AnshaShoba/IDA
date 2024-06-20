@@ -1,0 +1,296 @@
+body{
+  background-color:rgba(248, 217, 222, 0.526);
+}
+
+/* Navbar */
+
+.navbar {
+  background-color:rgba(255, 182, 193, 0.479);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-link {
+  color:blueviolet;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight:bolder;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: color 0.25s ease-out;
+}
+
+.navbar-link:hover {
+  color:rgb(255, 0, 0);
+  font-weight: bolder;
+}
+
+/* Home */
+#home{
+  background-color:rgba(255, 182, 193, 0.479);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+h4{
+  color:green;
+  background: -webkit-linear-gradient(20deg,rgb(0, 128, 0), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+  position: relative;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* services */
+#services{
+  background-color: rgba(173, 216, 230, 0.601);
+}
+.service-card {
+  width: 15rem;
+  height: 15rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05); 
+}
+
+
+/* clients */
+
+h2{
+  color:blueviolet;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.service {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.service:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+.service img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.service:hover img {
+  filter: grayscale(100%) brightness(70%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* process */
+
+.text{
+   text-align: center;
+   color:tomato;
+}
+
+.containers {
+  width: 100%;
+  height: 120vh;
+  background: #e91e622e;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  border-radius: 50px;
+  background: #fffffff4;
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: .9s;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.449);
+}
+.box:hover {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.675);
+}
+.box img {
+  width: 30%;
+  height: auto;
+}
+.content {
+  width: 70%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.content h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.content p {
+  font-size: 15px;
+}
+
+/* projects */
+
+.our-services {
+  margin-top: 50px;
+}
+
+.flip-container {
+  margin: 0 auto 60px auto;
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.lazyload {
+  width: 100%;
+  height: 200px;
+}
+
+.front, .back {
+  width: 100%;
+  max-width: 320px;
+  height: 250px;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  position: absolute;
+
+}
+
+.front h2, .back h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.front img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.back {
+  background: pink;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 20px;
+}
+
+.back h3 {
+  margin-top: 20px;
+}
+
+.back p {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.flipper {
+  transition: 2s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* contact */
+#contact{
+  background-color: rgba(0, 0, 0, 0.71);
+  height: 100vh;
+}
+.h1 {
+  color: orange;
+  font-size: 20px;
+}
+label {
+  color: orange;
+  font-size: 20px;
+}
+
+.logo{
+  width:50px;
+}
+.para {
+  font-size: 16px;
+  color:white;
+  font-size: medium;
+  font-style: italic;
+}
